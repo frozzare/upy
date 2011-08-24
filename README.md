@@ -6,6 +6,9 @@
 1. install npm `curl http://npmjs.org/install.sh | sh`
 2. `npm install upy`
 
+# build
+	node-waf configure build
+
 # test the installation
 	1. `npm install vows`
 	2. `node test/value.js`
