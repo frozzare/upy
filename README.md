@@ -10,8 +10,8 @@
 	node-waf configure build
 
 # test the installation
-	1. `npm install vows`
-	2. `node test/value.js`
+1. `npm install vows`
+2. `node test/value.js`
 
 # usage
 a quick example using `node-upy`,
