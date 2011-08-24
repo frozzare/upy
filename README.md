@@ -1,6 +1,7 @@
 # node-upy
 
-`node-upy` is a easy to use uptime module for node.js build with c++. 
+`node-upy` is a easy to use uptime module for node.js build with c++.
+Have been tested under Mac and Linux system. Don't have any Windows support.
 
 # installation
 1. install npm `curl http://npmjs.org/install.sh | sh`
