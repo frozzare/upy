@@ -52,6 +52,29 @@ namespace upy {
 		_hour = _minute * 60;
 		_day = _hour * 24;
 
+		target->Set(String::NewSymbol("version"), String::New(UPY_VERSION));
+
+		Local<FunctionTemplate> t1 = FunctionTemplate::New(Uptime);
+		target->Set(String::NewSymbol("uptime"), t1->GetFunction());
+
+		Local<FunctionTemplate> t2 = FunctionTemplate::New(Days);
+		target->Set(String::NewSymbol("days"), t2->GetFunction());
+
+		Local<FunctionTemplate> t3 = FunctionTemplate::New(Hours);
+		target->Set(String::NewSymbol("hours"), t3->GetFunction());
+
+		Local<FunctionTemplate> t4 = FunctionTemplate::New(Minutes);
+		target->Set(String::NewSymbol("minutes"), t4->GetFunction());
+
+		Local<FunctionTemplate> t5 = FunctionTemplate::New(Seconds);
+		target->Set(String::NewSymbol("seconds"), t5->GetFunction());
+		
+		Local<FunctionTemplate> t6 = FunctionTemplate::New(Timestamp);
+		target->Set(String::NewSymbol("timestamp"), t6->GetFunction());
+	}
+
+	void get_uptime() {
+		
 		#if _POSIX_TIMERS > 0
 
 		// SEE: http://pubs.opengroup.org/onlinepubs/009695399/functions/clock_gettime.html
@@ -74,45 +97,29 @@ namespace upy {
 			_time = time_now.tv_sec - result.tv_sec;
 		
 		#endif
-
-		target->Set(String::NewSymbol("version"), String::New(UPY_VERSION));
-
-		Local<FunctionTemplate> t1 = FunctionTemplate::New(Uptime);
-		target->Set(String::NewSymbol("uptime"), t1->GetFunction());
-
-		Local<FunctionTemplate> t2 = FunctionTemplate::New(Days);
-		target->Set(String::NewSymbol("days"), t2->GetFunction());
-
-		Local<FunctionTemplate> t3 = FunctionTemplate::New(Hours);
-		target->Set(String::NewSymbol("hours"), t3->GetFunction());
-
-		Local<FunctionTemplate> t4 = FunctionTemplate::New(Minutes);
-		target->Set(String::NewSymbol("minutes"), t4->GetFunction());
-
-		Local<FunctionTemplate> t5 = FunctionTemplate::New(Seconds);
-		target->Set(String::NewSymbol("seconds"), t5->GetFunction());
-		
-		Local<FunctionTemplate> t6 = FunctionTemplate::New(Timestamp);
-		target->Set(String::NewSymbol("timestamp"), t6->GetFunction());
 	}
 
 	const int get_days() 
 	{
+		get_uptime();
 		return int( _time / _day );
 	}
 	
 	const int get_hours()
 	{
+		get_uptime();
 		return int( ( _time % _day ) / _hour );
 	}
 
 	const int get_minutes()
 	{
+		get_uptime();
 		return int( ( _time % _hour ) / _minute );
 	}
 	
 	const int get_seconds() 
 	{
+		get_uptime();
 		return int( _time % _minute );
 	}
 
