@@ -14,7 +14,7 @@
         "url": "http://github.com/duofy/node-upy.git"
     },
     "bugs": {
-        "web": "http://github.com/duofy/node-upy/issues"
+        "url": "http://github.com/duofy/node-upy/issues"
     },
     "contributors":[{
         "name": "Duofy team", 
