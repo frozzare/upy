@@ -7,14 +7,14 @@
         "util",
         "utility"
     ],
-    "version": "0.1.1",
+    "version": "0.1.2",
     "author": "Fredrik Forsmo <fredrik.forsmo@gmail.com>",
     "repository": {
         "type": "git",
         "url": "http://github.com/duofy/node-upy.git"
     },
     "bugs": {
-        "web": "http://github.com/duofy/node-upy/issues"
+        "url": "http://github.com/duofy/node-upy/issues"
     },
     "contributors":[{
         "name": "Duofy team", 

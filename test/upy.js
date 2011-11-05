@@ -1,4 +1,4 @@
-var upy = require('../upy');
+var upy = require('../build/Release/upy');
 
 console.log( 'upy uptime values' );
 console.log( '----------------' );

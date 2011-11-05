@@ -1,4 +1,4 @@
-var upy = require('../upy'),
+var upy = require('../build/Release/upy'),
 	vows = require('vows'),
     assert = require('assert');
 
