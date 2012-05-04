@@ -21,7 +21,7 @@
         "url": "http://github.com/frozzare/upy/issues"
     },
     "scripts": {
-      "test": "mocha test/values.js"
+      "test": "make test"
     },
     "main": "./index"
 }
