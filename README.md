@@ -27,7 +27,7 @@ Quick example using `upy`,
 	upy.hours()				// returns uptime in hours
 	upy.minutes()			// returns uptime in minute
 	upy.seconds()			// returns uptime in seconds
-	upy.timestamp()		// returns uptime as a timestamp (seconds)
+	upy.timestamp()			// returns uptime as a timestamp (seconds)
 
 
 # copyright and license 
