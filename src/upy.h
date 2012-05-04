@@ -1,7 +1,4 @@
 /*
-Upy module by Duofy Team 
-http://duofy.com
-
 Copyright (C) 2011 by Fredrik Forsmo
 http://forsmo.me
 

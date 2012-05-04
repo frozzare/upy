@@ -1,6 +1,6 @@
-# node-upy
+# Upy
 
-`node-upy` is a easy to use uptime module for node.js build with c++.
+`upy` is a easy to use machine uptime module for node.js build C++.
 Have been tested under Mac and Linux system. Don't have any Windows support.
 
 # installation
@@ -15,23 +15,22 @@ Have been tested under Mac and Linux system. Don't have any Windows support.
 2. `node test/value.js`
 
 # usage
-a quick example using `node-upy`,
-Your .js files and upy.node have to bee in the same directory or with hard links. 
+Quick example using `upy`,
 
 	var upy = require('./upy');
 	
 	console.log( upy.uptime() ); // Uptime x day(s), x hour(s), x minute(s), x second(s)
 
 # functions
-	upy.uptime()		// returns a string telling you the uptime
-	upy.days()			// returns days
-	upy.hours()			// returns hours
-	upy.minutes()		// returns minute
-	upy.seconds()		// returns seconds
+	upy.uptime()			// returns a string telling you the uptime
+	upy.days()				// returns days
+	upy.hours()				// returns hours
+	upy.minutes()			// returns minute
+	upy.seconds()			// returns seconds
 	upy.timestamp()		// returns timestamp in seconds
 
 
 # copyright and license 
-`node-upy` is release under MIT license.
+`upy` is release under [MIT license](http://frozzare.mit-license.org/).
 
-Copyright 2011 [Fredrik Forsmo](http://forsmo.me), [Duofy team](http://duofy.com)
+Copyright 2011 [Fredrik Forsmo](http://forsmo.me)

@@ -1,7 +1,4 @@
 /*
-Upy module by Duofy Team 
-http://duofy.com
-
 Copyright (C) 2011 by Fredrik Forsmo
 http://forsmo.me
 
@@ -144,21 +141,31 @@ namespace upy {
 	}
 
 	Handle<Value> Hours(const Arguments &args) {
+    int days = get_days();
 		int hours = get_hours();
-		return Integer::New(hours);
+    int count = (days * 24) + hours;
+		return Integer::New(count);
 	}
 
 	Handle<Value> Minutes(const Arguments &args) {
+    int days = get_days();
+    int hours = get_hours();
 		int minutes = get_minutes();
-		return Integer::New(minutes);
+    int count = ((days * 24) + hours) * 60;
+		return Integer::New(count);
 	}
 
 	Handle<Value> Seconds(const Arguments &args) {
+    int days = get_days();
+    int hours = get_hours();
+    int minutes = get_minutes();
 		int seconds = get_seconds();
-		return Integer::New(seconds);
+    int count = (((days * 24) + hours) * 60) * 60;
+		return Integer::New(count);
 	}
 	
 	Handle<Value> Timestamp(const Arguments &args) {
+    get_uptime();
 		return Integer::New(_time);
 	}
 }

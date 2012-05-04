@@ -1,24 +1,30 @@
 {
     "name": "upy",
-    "description": "Upy is a easy to use uptime module for node.js build with c++. ",
+    "description": "Upy is a easy to use machine uptime module for node.js build C++",
     "tags": [
         "uptime",
         "system",
         "util",
         "utility"
     ],
-    "version": "0.1.2",
+    "version": "2.0",
     "author": "Fredrik Forsmo <fredrik.forsmo@gmail.com>",
     "repository": {
         "type": "git",
-        "url": "http://github.com/duofy/node-upy.git"
+        "url": "http://github.com/frozzare/upy.git"
+    },
+    "dependencies": {
+      "colors": "*",
+      "optimist": "0.2.x"
+    },
+    "devDependencies": {
+      "vows": "0.6.x"
     },
     "bugs": {
-        "url": "http://github.com/duofy/node-upy/issues"
+        "url": "http://github.com/frozzare/upy/issues"
     },
-    "contributors":[{
-        "name": "Duofy team", 
-        "email": "hello@duofy.com"
-    }],
-    "main": "./upy"
+    "bind": {
+      "upy": "./bin/upy"
+    },
+    "main": "./index"
 }
