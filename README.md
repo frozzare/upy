@@ -23,11 +23,11 @@ Quick example using `upy`,
 
 # functions
 	upy.uptime()			// returns a string telling you the uptime
-	upy.days()				// returns days
-	upy.hours()				// returns hours
-	upy.minutes()			// returns minute
-	upy.seconds()			// returns seconds
-	upy.timestamp()		// returns timestamp in seconds
+	upy.days()				// returns uptime in days
+	upy.hours()				// returns uptime in hours
+	upy.minutes()			// returns uptime in minute
+	upy.seconds()			// returns uptime in seconds
+	upy.timestamp()		// returns uptime as a timestamp (seconds)
 
 
 # copyright and license 
