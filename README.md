@@ -11,8 +11,8 @@ Have been tested under Mac and Linux system. Don't have any Windows support.
 	node-waf configure build
 
 # test the installation
-1. `npm install vows`
-2. `node test/value.js`
+1. `npm install -g mocha`
+2. `mocha test/values.js`
 
 # usage
 Quick example using `upy`,

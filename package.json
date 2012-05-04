@@ -18,13 +18,17 @@
       "optimist": "0.2.x"
     },
     "devDependencies": {
-      "vows": "0.6.x"
+      "should": "0.6.x",
+      "mocha": "1.0.x"
     },
     "bugs": {
         "url": "http://github.com/frozzare/upy/issues"
     },
     "bind": {
       "upy": "./bin/upy"
+    },
+    "scripts": {
+      "test": "mocha test/values.js"
     },
     "main": "./index"
 }
