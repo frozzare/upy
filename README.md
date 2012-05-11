@@ -8,6 +8,11 @@ Have been tested under Mac and Linux system. Don't have any Windows support.
 2. `npm install upy`
 
 # build
+	npm install node-gyp -g
+	node-gyp configure build
+
+or on older node.js versions
+
 	node-waf configure build
 
 # test the installation

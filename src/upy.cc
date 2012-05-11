@@ -96,25 +96,25 @@ namespace upy {
 		#endif
 	}
 
-	const int get_days() 
+	int get_days() 
 	{
 		get_uptime();
 		return int( _time / _day );
 	}
 	
-	const int get_hours()
+	int get_hours()
 	{
 		get_uptime();
 		return int( ( _time % _day ) / _hour );
 	}
 
-	const int get_minutes()
+	int get_minutes()
 	{
 		get_uptime();
 		return int( ( _time % _hour ) / _minute );
 	}
 	
-	const int get_seconds() 
+	int get_seconds() 
 	{
 		get_uptime();
 		return int( _time % _minute );
@@ -150,8 +150,8 @@ namespace upy {
 	Handle<Value> Minutes(const Arguments &args) {
     int days = get_days();
     int hours = get_hours();
-		int minutes = get_minutes();
-    int count = ((days * 24) + hours) * 60;
+    int minutes = get_minutes();
+    int count = (((days * 24) + hours) * 60) + minutes;
 		return Integer::New(count);
 	}
 
@@ -159,8 +159,8 @@ namespace upy {
     int days = get_days();
     int hours = get_hours();
     int minutes = get_minutes();
-		int seconds = get_seconds();
-    int count = (((days * 24) + hours) * 60) * 60;
+    int seconds = get_seconds();
+    int count = ((((((days * 24) + hours) * 60) + minutes) * 60) + seconds);
 		return Integer::New(count);
 	}
 	
