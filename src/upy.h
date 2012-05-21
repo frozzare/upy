@@ -22,7 +22,7 @@ THE SOFTWARE.
 */
 
 #ifndef UPY_VERSION
-#define UPY_VERSION "v0.0.1"
+#define UPY_VERSION "v2.0.3"
 
 #include <v8.h>
 #include <node.h>
