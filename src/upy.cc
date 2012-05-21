@@ -141,31 +141,31 @@ namespace upy {
 	}
 
 	Handle<Value> Hours(const Arguments &args) {
-    int days = get_days();
-    int hours = get_hours();
-    int count = (days * 24) + hours;
-    return Integer::New(count);
+		int days = get_days();
+		int hours = get_hours();
+		int count = (days * 24) + hours;
+		return Integer::New(count);
 	}
 
 	Handle<Value> Minutes(const Arguments &args) {
-    int days = get_days();
-    int hours = get_hours();
-    int minutes = get_minutes();
-    int count = (((days * 24) + hours) * 60) + minutes;
-    return Integer::New(count);
+		int days = get_days();
+		int hours = get_hours();
+		int minutes = get_minutes();
+		int count = (((days * 24) + hours) * 60) + minutes;
+		return Integer::New(count);
 	}
 
 	Handle<Value> Seconds(const Arguments &args) {
-    int days = get_days();
-    int hours = get_hours();
-    int minutes = get_minutes();
-    int seconds = get_seconds();
-    int count = ((((((days * 24) + hours) * 60) + minutes) * 60) + seconds);
-    return Integer::New(count);
+		int days = get_days();
+		int hours = get_hours();
+		int minutes = get_minutes();
+		int seconds = get_seconds();
+		int count = ((((((days * 24) + hours) * 60) + minutes) * 60) + seconds);
+		return Integer::New(count);
 	}
 	
-  Handle<Value> Timestamp(const Arguments &args) {
-	  get_uptime();
-	  return Integer::New(_time);
+	Handle<Value> Timestamp(const Arguments &args) {
+		get_uptime();
+		return Integer::New(_time);
 	}
 }
